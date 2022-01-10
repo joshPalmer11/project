@@ -1,0 +1,44 @@
+//all visual code got help from official p5 website
+let font,
+  fontsize = 100;
+function setup() {
+  createCanvas(windowWidth, windowHeight);//creating canvas at the size of the window
+}
+function mousePressed(){
+  screen2();
+};
+function draw() {
+  background(129, 129, 145);
+  screen1();
+
+};
+
+function screen1(){
+  removeElements();
+  play = createButton("Play");//creating buttons for the home screen
+  account = createButton("Account");
+  play.position(850,200);
+  play.size(200,75)
+  account.position(850,300); //correcting the size and position of both buttons
+  account.size(200,75)
+  fontSize = min(50, 50);
+  play.style('font-size', fontSize + 'px');
+  account.style('font-size', fontSize + 'px');
+  let Orange = color(251, 127, 3);
+  let Red = color(255, 204, 0);
+  play.style('background-color', Orange); //changing the colour of the buttons 
+  account.style('background-color', Red);
+  //play.mousePressed(screen2); //goes to the play screen when the play button is pressed
+  if (play.mousePressed==true){
+    screen2();
+  }
+};
+
+
+function screen2() {
+    removeElements();
+    background(129, 129, 145)
+    textSize(70);
+    fill(25, 25, 25);
+    text("Play Screen",650,150);
+};
